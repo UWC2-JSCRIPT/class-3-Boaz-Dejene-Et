@@ -2,7 +2,11 @@
 // attackingPlayer, defendingPlayer, baseDamage, variableDamage
 
 // function attack(attackingPlayer, defendingPlayer, baseDamage, variableDamage) {
-//   return (attackingPlayer, defendingPlayer, baseDamage, variableDamage)
+//   const randomDamage = Math.floar(Math.random() * variableDamage + 1);
+//   const totalDamage = baseDamage + randomDamage;
+//   defendingPlayer.health -= totalDamage
+
+//   return `${attackingPlayer} hits ${defendingPlayer} for ${totalDamage} damage`
 // }
 
 
@@ -15,7 +19,7 @@ const player1 = {
 }
 
 const player2 = {
-  name: "John",
+  name: "Mark",
   health: 10
 }
 
@@ -23,7 +27,11 @@ const player2 = {
 // 3. Refactor attack function to an arrow function.  Comment out function above.
 
 const attack = (attackingPlayer, defendingPlayer, baseDamage, variableDamage) => {
-  return {attackingPlayer, defendingPlayer, baseDamage, variableDamage}
+  let randomDamage = Math.floor(Math.random() * variableDamage + 1)
+  let totalDamage = baseDamage + randomDamage
+  defendingPlayer.health -= totalDamage
+
+  return `${attackingPlayer.name} hits ${defendingPlayer.name} for ${totalDamage} damage`
 }
 
 // DO NOT MODIFY THE CODE BELOW THIS LINE
